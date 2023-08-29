@@ -1,0 +1,8 @@
+#!/sbin/openrc-run
+
+depend() {
+         need net
+}
+
+command="nohup /usr/bin/mullvad-daemon"
+command_args="&"
