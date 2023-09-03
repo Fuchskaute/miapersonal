@@ -46,7 +46,7 @@ src_install() {
 	done
 
 	newinitd "${FILESDIR}/mullvad-daemon.initd" mullvad-daemon
-	elog "Please sure to enable the mullvad-daemon service"
+	elog "Please make sure to enable the mullvad-daemon service"
 }
 
 pkg_postinst() {
