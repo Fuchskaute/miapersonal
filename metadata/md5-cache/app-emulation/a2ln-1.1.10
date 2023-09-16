@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+EAPI=8
+INHERIT=pypi
+KEYWORDS=~amd64
+SLOT=0
+SRC_URI=https://files.pythonhosted.org/packages/source/a/a2ln/a2ln-1.1.10.tar.gz
+_eclasses_=pypi	2eecb475512bc76e5ea9192a681b9e6b
+_md5_=2873cf635bf04d837b0e0b0a272fb520

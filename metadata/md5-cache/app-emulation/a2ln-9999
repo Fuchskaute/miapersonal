@@ -1,0 +1,9 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+EAPI=8
+INHERIT=pypi git-r3
+PROPERTIES=live
+SLOT=0
+SRC_URI=https://files.pythonhosted.org/packages/source/a/a2ln/a2ln-9999.tar.gz
+_eclasses_=pypi	2eecb475512bc76e5ea9192a681b9e6b	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_md5_=ba404a3462861de89e3076cc5e7af3cf
