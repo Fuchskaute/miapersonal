@@ -1,0 +1,5 @@
+gentoo:default/linux/amd64/23.0/hardened
+gentoo:default/linux/amd64/17.1/clang
+gentoo:targets/desktop
+gentoo:targets/systemd
+gentoo:features/merged-usr

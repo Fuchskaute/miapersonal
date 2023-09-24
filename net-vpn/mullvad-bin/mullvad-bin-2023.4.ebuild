@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 
 PYTHON_COMPAT=( python3_{6..12} )
 
-IUSE="openrc"
+IUSE="systemd"
 
 RDEPEND="
 	net-print/cups
@@ -45,8 +45,13 @@ src_install() {
 		doicon -s ${x} usr/share/icons/hicolor/${x}*/*
 	done
 
-	newinitd "${FILESDIR}/mullvad-daemon.initd" mullvad-daemon
-	elog "Please make sure to enable the mullvad-daemon service"
+	if use systemd ; then
+		systemd_dounit "${FILESDIR}"/mullvad-daemon.service
+		elog "Please make sure to enable the mullvad-daemon service"
+	else
+		newinitd "${FILESDIR}/mullvad-daemon.initd" mullvad-daemon
+		elog "Please make sure to enable the mullvad-daemon service"
+	fi
 }
 
 pkg_postinst() {
