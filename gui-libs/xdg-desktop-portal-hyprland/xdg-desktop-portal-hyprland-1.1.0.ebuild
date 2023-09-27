@@ -66,6 +66,9 @@ pkg_setup() {
 
 src_prepare() {
 	if tc-is-clang ; then
+		if [[ $(clang-major-version) -lt 17 ]] ; then
+			die "XDPH-1.1.0 requires >= sys-devel/clang-17.0.1 to build"
+		fi
 		eapply "${FILESDIR}/xdg-desktop-portal-hyprland-1.1.0_fix_clang.patch"
 		default
 	fi
