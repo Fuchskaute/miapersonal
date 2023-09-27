@@ -61,14 +61,13 @@ pkg_setup() {
 		if [[ ${STDLIBVER} -lt 13 ]]; then
 			die "XDPH requires >=sys-devel/gcc-13.0.0 to build"
 		fi
+	elif [[ $(clang-major-version) -lt 17 ]] ; then
+		die "XDPH-1.1.0 requires >= sys-devel/clang-17.0.1 to build"
 	fi
 }
 
 src_prepare() {
 	if tc-is-clang ; then
-		if [[ $(clang-major-version) -lt 17 ]] ; then
-			die "XDPH-1.1.0 requires >= sys-devel/clang-17.0.1 to build"
-		fi
 		eapply "${FILESDIR}/xdg-desktop-portal-hyprland-1.1.0_fix_clang.patch"
 		default
 	fi

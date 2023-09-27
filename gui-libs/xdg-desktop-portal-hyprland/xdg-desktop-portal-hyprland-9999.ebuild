@@ -61,6 +61,8 @@ pkg_setup() {
 		if [[ ${STDLIBVER} -lt 13 ]]; then
 			die "XDPH requires >=sys-devel/gcc-13.0.0 to build"
 		fi
+	elif [[ $(clang-major-version) -lt 17 ]] ; then
+		die "XDPH requires >= sys-devel/clang-17.0.1 to build"
 	fi
 }
 
