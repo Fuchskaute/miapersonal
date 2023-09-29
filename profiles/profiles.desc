@@ -3,3 +3,4 @@ amd64 llvm-desktop-hardened dev
 amd64 llvm-desktop-systemd dev
 amd64 llvm-desktop-hardened-systemd dev
 amd64 llvm-desktop-hardened-systemd-merged-usr dev
+amd64 llvm-hardened-no-multilib dev
